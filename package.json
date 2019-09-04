@@ -1,0 +1,32 @@
+{
+  "name": "vakavic",
+  "version": "1.0.1",
+  "description": "vakavic nodejs API caller, for complete information please refer to [vakavic](https://vakavic.com)",
+  "homepage": "https://github.com/DrEhsan/vakavic",
+  "main": "vakavic",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AmirHasan Hesam <ehsan.hesam13@gmail.com>",
+  "contributors": [
+    "AmirHasan Hesam (https://github.com/DrEhsan/)"
+  ],
+  "keywords": [
+    "vakavic",
+    "ai",
+    "Artificial intelligence",
+    "text classify",
+    "text summarize"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DrEhsan/vakavic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DrEhsan/vakavic/issues"
+  }
+}
