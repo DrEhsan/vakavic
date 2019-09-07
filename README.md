@@ -1,11 +1,11 @@
-vakavic
+Vakavic
 ===================
 
-vakavic nodejs API caller.
+Vakavic nodejs API caller.
 
-## What is vakavic?
+## What is Vakavic?
 
-For complete information please refer to [vakavic](https://vakavic.com)
+For complete information please refer to [Vakavic](https://vakavic.com)
 
 ## Installation
 
@@ -13,7 +13,7 @@ For complete information please refer to [vakavic](https://vakavic.com)
 
 ## Getting Started
 
-First of all you should login to vakavic account and obtain your `API_KEY`
+First of all you should login to Vakavic account and obtain your `API_KEY`
 
 ### Text summarize
 
@@ -27,22 +27,24 @@ let _vakavic = new vakavic({
 let text = "Your Text to summarize";
 
 // sentence count is set to 5
-_vakavic.summarizeText(text, function(error, response){
-  if (error){
-    throw new Error(error);
-  }
-
-  console.log(response)
-})
+_vakavic
+  .summarizeText(text)
+  .then(response => {
+    console.log(response);
+  })
+  .catch(err => {
+    throw new Error(err);
+  });
 
 // sentece count can be set manually : for example here we took 2
-_vakavic.summarizeText(text, 2, function(error, response){
-  if (error){
-    throw new Error(error);
-  }
-
-  console.log(response)
-})
+_vakavic
+  .summarizeText(text, 2)
+  .then(response => {
+    console.log(response);
+  })
+  .catch(err => {
+    throw new Error(err);
+  });
 ```
 
 ### Classification
@@ -60,17 +62,18 @@ let _vakavic = new vakavic({
   api_token : 'YOUR_API_TOKEN'
 })
 
-let text = "Your Text to summarize";
+let text = "Your Text to classify";
 
 let module_key = "YOUR_MODULE_KEY";
 
-_vakavic.classify(module_key, text, function(error, response){
-  if (error){
-    throw new Error(error);
-  }
-
-  console.log(response)
-})
+_vakavic
+  .classify(module_key, text)
+  .then(response => {
+    console.log(response);
+  })
+  .catch(err => {
+    throw new Error(err);
+  });
 ```
 
 ## getClassifications
@@ -82,17 +85,18 @@ let _vakavic = new vakavic({
   api_token : 'YOUR_API_TOKEN'
 })
 
-let text = "Your Text to summarize";
+let text = "Your Text to classify";
 
 let module_key = "YOUR_MODULE_KEY";
 
-_vakavic.getClassifications(module_key, text, function(error, response){
-  if (error){
-    throw new Error(error);
-  }
-
-  console.log(response)
-})
+_vakavic
+  .getClassifications(module_key, text)
+  .then(response => {
+    console.log(response);
+  })
+  .catch(err => {
+    throw new Error(err);
+  });
 ```
 
 ## batchClassifications
@@ -104,16 +108,20 @@ let _vakavic = new vakavic({
   api_token : 'YOUR_API_TOKEN'
 })
 
-let text = "Your Text to summarize";
+let textArray = [
+  "Your first Text to classify",
+  "Your second Text to classify"
+];
 
 let module_key = "YOUR_MODULE_KEY";
 
-_vakavic.batchClassifications(module_key, text, function(error, response){
-  if (error){
-    throw new Error(error);
-  }
-
-  console.log(response)
-})
+_vakavic
+  .batchClassifications(module_key, textArray)
+  .then(response => {
+    console.log(response);
+  })
+  .catch(err => {
+    throw new Error(err);
+  });
 ```
 
